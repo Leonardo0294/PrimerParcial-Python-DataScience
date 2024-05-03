@@ -75,3 +75,5 @@ plt.grid(True)
 plt.show()
 
 productos()
+
+producto
