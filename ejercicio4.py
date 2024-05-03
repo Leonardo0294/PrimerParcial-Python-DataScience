@@ -59,11 +59,11 @@ for venta in ventas:
 
 df_cantidad_disponible = df_productos[['nombre', 'cantidad_disponible']]
 
-lista_productos = df_cantidad_disponible['nombre', 'cantidad_disponible'].value_counts().sort_index()
+lista_productos = df_cantidad_disponible[['nombre', 'cantidad_disponible']].value_counts().sort_index()
 
-#Se crea un grafico de barras
+#Se crea un grafico 
 plt.figure(figsize=(10, 6))
-plt.plot(cantidad_productos.index, cantidad_productos.values, marker='o', linestyle='-', color='b')
+plt.plot(df_productos["nombre"], df_productos["cantidad_disponible"], marker='o', linestyle='-', color='b')
     
 #Grafico config
 plt.title('Lista de productos')
@@ -73,7 +73,3 @@ plt.grid(True)
     
 
 plt.show()
-
-productos()
-
-producto
